@@ -17,3 +17,8 @@ Ela permite percorrer o histórico:
 ← Encomenda 110
 
 E também no sentido contrário:
+Encomenda 110 →
+Encomenda 105 →
+Encomenda 101 →
+
+Ideia: essa pessoa cuida da consulta e do histórico.
