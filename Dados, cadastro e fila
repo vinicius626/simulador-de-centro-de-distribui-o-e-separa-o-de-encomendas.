@@ -1,0 +1,15 @@
+1. Dados, cadastro e fila
+Essa pessoa fica responsável pela base do sistema.
+- Criar struct Encomenda
+- Criar struct Centro
+- Definir os dados de cada encomenda, como:
+  - código
+  - peso
+  - destino
+  - prioridade
+  - distância
+- Criar a fila
+- Cadastrar novas encomendas
+- Colocar encomendas aguardando processamento na fila
+- Mostrar as encomendas da fila
+Ideia: é a porta de entrada do sistema.
