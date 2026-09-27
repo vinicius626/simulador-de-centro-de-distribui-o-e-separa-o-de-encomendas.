@@ -1,0 +1,39 @@
+4. Pilha e integração
+Essa pessoa fica responsável pela pilha de problemas e pela união do projeto.
+Quando uma encomenda apresenta algum problema:
+Encomenda 105 → problema
+                 ↓
+              PILHA
+
+Como a pilha funciona no modelo LIFO:
+Problema 3  ← sai primeiro
+Problema 2
+Problema 1  ← entrou primeiro
+
+Além disso, essa parte pode ficar responsável pelo main.cpp, criando o menu:
+===== CENTRO DE DISTRIBUIÇÃO =====
+
+1 - Cadastrar encomenda
+2 - Exibir fila
+3 - Processar encomendas
+4 - Buscar encomenda
+5 - Ver histórico
+6 - Ver problemas
+0 - Sair
+
+🔗 Como as 4 partes se juntam
+O sistema completo ficaria mais ou menos assim:
+CADASTRO
+   ↓
+FILA
+   ↓
+ORDENAÇÃO
+   ↓
+PROCESSAMENTO
+   ↓
+ ┌───────────────┬────────────────┐
+ ↓               ↓                ↓
+HISTÓRICO       ABB              PILHA
+(lista)       (busca)          (problemas)
+
+O ponto mais importante: antes de cada pessoa programar sua parte, vocês precisam definir juntos a struct Encomenda. Se cada integrante criar campos ou nomes diferentes, na hora de juntar os códigos vai dar problema.
