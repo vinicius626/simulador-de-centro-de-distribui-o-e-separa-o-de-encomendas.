@@ -1,14 +1,24 @@
-2. Processamento e ordenação
-Essa parte pega as encomendas que estão na fila e decide qual será processada primeiro.
-Por exemplo:
-Prioridade 3 → primeiro
-Prioridade 2 → depois
-Prioridade 1 → depois
+3. Busca e histórico
+Essa pessoa trabalha com duas estruturas importantes.
+Árvore Binária de Busca (ABB)
+Permite procurar rapidamente uma encomenda pelo código:
+Digite o código: 105
 
-Também pode considerar:
-- peso
-- distância
-- região/destino
-- capacidade do centro
-Aqui entra o algoritmo de ordenação pedido no trabalho.
-Ideia: essa pessoa cria a lógica que decide a ordem de processamento.
+Encomenda encontrada:
+Código: 105
+Destino: Recife
+Peso: 8 kg
+
+Lista duplamente encadeada
+Guarda o histórico das encomendas que já foram processadas/encaminhadas.
+Ela permite percorrer o histórico:
+← Encomenda 101
+← Encomenda 105
+← Encomenda 110
+
+E também no sentido contrário:
+Encomenda 110 →
+Encomenda 105 →
+Encomenda 101 →
+
+Ideia: essa pessoa cuida da consulta e do histórico.
