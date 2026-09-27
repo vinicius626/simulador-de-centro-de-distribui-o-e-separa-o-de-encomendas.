@@ -1,0 +1,19 @@
+3. Busca e histórico
+Essa pessoa trabalha com duas estruturas importantes.
+Árvore Binária de Busca (ABB)
+Permite procurar rapidamente uma encomenda pelo código:
+Digite o código: 105
+
+Encomenda encontrada:
+Código: 105
+Destino: Recife
+Peso: 8 kg
+
+Lista duplamente encadeada
+Guarda o histórico das encomendas que já foram processadas/encaminhadas.
+Ela permite percorrer o histórico:
+← Encomenda 101
+← Encomenda 105
+← Encomenda 110
+
+E também no sentido contrário:
