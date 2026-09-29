@@ -1,0 +1,42 @@
+1. Distância da encomenda
+Cada encomenda terá um campo chamado distanciaKm, que indica quantos quilômetros o centro de distribuição está do destino. Esse número será informado no cadastro, sem precisar calcular rotas.
+Por exemplo: se uma encomenda vai para um destino a 12,5 km do centro, seu valor será 12.5. O programa poderá usar esse campo para ordenar as encomendas da mais próxima para a mais distante.
+
+2. Capacidade do centro
+A capacidade será o peso máximo total que o centro pode processar em uma rodada. Por exemplo, se a capacidade for 100 kg, o centro pode processar encomendas que, juntas, pesem até 100 kg naquela rodada.
+Se uma encomenda não couber no espaço que restou, ela fica na fila para a próxima rodada. Se ela, sozinha, pesar mais do que a capacidade total do centro, será registrada como um problema na pilha.
+
+3. Prioridade e ordem de chegada
+Cada encomenda terá prioridade de 1 a 3:
+- 3 significa prioridade alta.
+- 2 significa prioridade média.
+- 1 significa prioridade baixa.
+No processamento, as encomendas com prioridade 3 vêm antes das de prioridade 2 e 1. Se duas tiverem a mesma prioridade, será processada primeiro a que chegou antes.
+O programa guardará essa ordem no campo ordemChegada. Esse número é atribuído automaticamente no cadastro: a primeira encomenda recebe 1, a segunda recebe 2 e assim por diante.
+
+4. Campos que todas as partes devem compartilhar
+Para que os códigos do grupo funcionem juntos, todos devem usar as mesmas estruturas e os mesmos nomes de campos:
+#include <string>
+
+enum class Status {
+    Aguardando,
+    Encaminhada,
+    Entregue,
+    Problema
+};
+
+struct Encomenda {
+    int codigo;
+    double pesoKg;
+    std::string destino;
+    int prioridade;
+    double distanciaKm;
+    int ordemChegada;
+    Status status;
+};
+
+struct Centro {
+    std::string nome;
+    double capacidadeKg;
+    std::string regiao;
+};
